@@ -1,0 +1,33 @@
+{
+  "name": "namaskara_react",
+  "version": "1.0.0",
+  "description": "React app",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prachan/namaskara-react.git"
+  },
+  "keywords": [
+    "pcs"
+  ],
+  "author": "pcs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prachan/namaskara-react/issues"
+  },
+  "homepage": "https://github.com/Prachan/namaskara-react#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserList": [
+      "last 5 versions"
+  ]
+  
+}
