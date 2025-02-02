@@ -1,14 +1,22 @@
 import React from "react";
 import { createRoot } from 'react-dom/client';
+ 
+const jsxHeading = <h1>Namaste jsx in React</h1>
 
-const heading = React.createElement("div",{id:"parent"},
-    [React.createElement("div",{id:"child1"}, 
-       [React.createElement("h1",{},"Child1 h1 tah"),  React.createElement("h2",{},"child1 h2 tag")]),
-    React.createElement("div",{id:"child2"}, 
-       [React.createElement("h1",{},"Child2 h1 tah"),  React.createElement("h2",{},"child2 h2 tag")]),
-    ]
-);
-console.log(heading)
+const HeaderComponent = () => {
+   return <h1>Functional Component</h1>
+}
+const reactElement = 12345;
+
+const RootComponent = () => (
+   <>
+      <h2>Component Composition start</h2>
+         <HeaderComponent />
+         {HeaderComponent()}
+         <h2>Adding normal element</h2>
+         <h3>{reactElement}</h3>
+   </>
+)
 
 const root = createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<RootComponent/>);
