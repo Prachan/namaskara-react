@@ -29,6 +29,7 @@
     padding-left: 1rem;
     display: inline-table;
     margin: 1rem;
+    background-color: darkred;
 }
 
 .resImg {
@@ -38,7 +39,7 @@
 }
 
 .textName {
-    color : palevioletred;
+    color : aliceblue;
 }
 
 .cusines {
