@@ -1,3 +1,48 @@
-#heading {
-    color: blueviolet;
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: antiquewhite
+}
+
+.options > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    width: 22rem;
+    color: red;
+}
+
+.foodApp {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    color: red;
+}
+
+.cardsContainer {
+    height: 390px;
+    width: 250px;
+    background-color: #f1f1f1;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    display: inline-table;
+    margin: 1rem;
+}
+
+.resImg {
+    width: 10rem;
+    height: 10rem;
+    justify-content: center;
+}
+
+.textName {
+    color : palevioletred;
+}
+
+.cusines {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
 }
