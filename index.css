@@ -36,6 +36,7 @@
     width: 10rem;
     height: 10rem;
     justify-content: center;
+    padding-left: 2rem;
 }
 
 .textName {
@@ -46,4 +47,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 200px;
+}
+
+.con {
+    display: flex;
 }
