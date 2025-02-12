@@ -1,7 +1,7 @@
 const CardComponet = (props) => {
     const {restaurantList} = props;
-    console.log("restaurantList",restaurantList);
-    const {name,deliveryTime,costForTwo,cuisines,cloudinaryImageId,avgRating} = restaurantList.data;
+  //  console.log("restaurantList",restaurantList);
+    const {name,deliveryTime,costForTwo,cuisines,cloudinaryImageId,avgRating} = restaurantList.info;
     return (
        <div className="cardsContainer">
           <h4 class="textName">{name}</h4>

@@ -1,4 +1,5 @@
 import { styleLogo } from "./constants";
+import { Link } from "react-router";
 
 const HeaderComponent = () => {
     return (
@@ -11,8 +12,9 @@ const HeaderComponent = () => {
           </div>
           <div className="options">
              <ul>
-                <li>Home</li>
-                <li>Delivery</li>
+                <li>
+                  <Link to="/contact"> Contact us </Link></li>
+                <li><Link to="/home"> Home</Link></li>
                 <li>Profile</li>
                 <li>Cart</li>
              </ul>
