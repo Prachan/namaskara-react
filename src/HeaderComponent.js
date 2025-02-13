@@ -12,8 +12,7 @@ const HeaderComponent = () => {
           </div>
           <div className="options">
              <ul>
-                <li>
-                  <Link to="/contact"> Contact us </Link></li>
+                <li> <Link to="/contact"> Contact us </Link></li>
                 <li><Link to="/home"> Home</Link></li>
                 <li>Profile</li>
                 <li>Cart</li>

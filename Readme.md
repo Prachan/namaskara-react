@@ -12,3 +12,7 @@ App Building
 
 # React - Part_5 to Part_7
 Hooks, Routing, Error Handling
+
+# React - Part9
+Optimaztion, custom Hooks
+//ToDo - UseOnline custom hook.

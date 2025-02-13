@@ -1,12 +1,14 @@
-import React from "react";
+import React, { lazy, Suspense}from "react";
 import { createRoot } from 'react-dom/client';;
 import RootComponent from "./src/RootComponent";
-import ContactPage from "./src/ContactPage";
+//import ContactPage from "./src/ContactPage";
 import BodyComponent from "./src/BodyComponent";
 import Error from "./src/Error";
 import RestaurantDetails from "./src/RestaurantDetails";
 import { createBrowserRouter, RouterProvider } from "react-router";
 
+
+const ContactPage = lazy(()=> import("./src/ContactPage"));
 
 const appRouter = createBrowserRouter([
     {
@@ -19,7 +21,7 @@ const appRouter = createBrowserRouter([
         },
         {
             path: "/contact",
-            element: <ContactPage/>,
+            element: <Suspense fallback= {<h1>Loading...</h1>}> <ContactPage/> </Suspense>,
         },
         {
             path: "/home",
