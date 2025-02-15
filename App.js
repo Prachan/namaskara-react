@@ -6,10 +6,14 @@ import BodyComponent from "./src/BodyComponent";
 import Error from "./src/Error";
 import RestaurantDetails from "./src/RestaurantDetails";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Memo from "./src/Memo";
+//import Memo from "./src/Memo";
 
 
 const ContactPage = lazy(()=> import("./src/ContactPage"));
+const Memo = lazy( ()=> {
+  return import("./src/Memo");
+});
+
 
 const appRouter = createBrowserRouter([
     {

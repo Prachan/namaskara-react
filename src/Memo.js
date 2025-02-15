@@ -1,17 +1,21 @@
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 
 const Memo = () => {
     const [isEnabled, setToggle] = useState(false);
     const [num, setNum] = useState("");
-   // const [res, setRes] = useState("");
+   const [res1, setRes] = useState(0);
 
     //const res = nPrime(num);
     //useMemo -caheces value and useCallback cacheds the funtion
+    let x =0;
+    const y = useRef(0);
+    console.log(y);
    const res = useMemo(()=> nPrime(num),[num])
-    console.log("Result",res);
+   // console.log("Result",res);
 
     const handleClick = () => {
         setToggle(!isEnabled);
+        setRes(res1+1);
     }
 
     const handleNumber = useCallback((e)=> {
@@ -24,6 +28,24 @@ const Memo = () => {
                  <input type="number" value={num} onChange={(e)=> handleNumber(e)}></input>
                 <h1>useMemo - {res}</h1>
                 
+            </div>
+            <div>
+                <h3>useRef compare- 
+                   <li> via state - {res1} </li> 
+                   <button onClick={() =>
+                    {
+                        y.current = y.current+1;
+                        console.log("val of y", y.current)
+                    } 
+                   }>Incrememt Ref</button>
+                    <li>via ref - {y.current}</li>
+                    <button onClick={()=> 
+                        { 
+                            x = x+1;
+                            console.log("Value of x",x)}
+                        }>Increment Normal</button>
+                    <li>Normal: {x}</li>
+                    </h3>
             </div>
         </div>
     )
