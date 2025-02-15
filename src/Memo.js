@@ -1,31 +1,29 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 
 const Memo = () => {
     const [isEnabled, setToggle] = useState(false);
     const [num, setNum] = useState("");
-    const [res, setRes] = useState("");
+   // const [res, setRes] = useState("");
 
-    //const res = nPrime(100);
-    console.log("Num",num);
+    //const res = nPrime(num);
+    //useMemo -caheces value and useCallback cacheds the funtion
+   const res = useMemo(()=> nPrime(num),[num])
+    console.log("Result",res);
 
-    const handleClick = (val) => {
-        console.log("Clicked...", val);
+    const handleClick = () => {
         setToggle(!isEnabled);
-
     }
-    function handleNumber (e) {
-        const res = nPrime(e.target.value);
-        console.log("res",res)
 
+    const handleNumber = useCallback((e)=> {
         setNum(e.target.value);
-        setRes(res)
-    }
+    },[num])
     return (
         <div>
             <div className={isEnabled ?"containerMemo": "themechange"}> 
             <button onClick={()=> handleClick("India")}>Toogle</button>
                  <input type="number" value={num} onChange={(e)=> handleNumber(e)}></input>
                 <h1>useMemo - {res}</h1>
+                
             </div>
         </div>
     )
