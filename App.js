@@ -6,6 +6,7 @@ import BodyComponent from "./src/BodyComponent";
 import Error from "./src/Error";
 import RestaurantDetails from "./src/RestaurantDetails";
 import { createBrowserRouter, RouterProvider } from "react-router";
+import Memo from "./src/Memo";
 
 
 const ContactPage = lazy(()=> import("./src/ContactPage"));
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
         {
             path: "/rest/:resId",
             element: <RestaurantDetails/>,
+        },
+        {
+          path: "/memo",
+          element: <Suspense fallback ={<h1>Loading Optimization...</h1>}><Memo/></Suspense>
         }
       ],
       errorElement: <Error/>

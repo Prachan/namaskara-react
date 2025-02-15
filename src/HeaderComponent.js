@@ -14,6 +14,7 @@ const HeaderComponent = () => {
              <ul>
                 <li> <Link to="/contact"> Contact us </Link></li>
                 <li><Link to="/home"> Home</Link></li>
+                <li><Link to="/memo">Memo</Link></li>
                 <li>Profile</li>
                 <li>Cart</li>
              </ul>
