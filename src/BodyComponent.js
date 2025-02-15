@@ -1,11 +1,15 @@
 import CardComponet from "./CardComponet";
 import { useState, useEffect } from "react";
 import { Link } from "react-router";
+import userDetails from "./utils/userDetails";
+import { useContext } from "react";
 
 const BodyComponent = () => {
   const [allRestaurants,setRestautrant] = useState([]);
   const [filterRestaurants,searchRestautrant] = useState([]);
   const [searchText, updateText] = useState('');
+  const data = useContext(userDetails);
+  const {name,setName} = data;
 
   useEffect(()=> {
     fetchData();
@@ -40,6 +44,9 @@ const BodyComponent = () => {
         <div>
           <input type="text" value={searchText} onChange={(e)=> {
               updateText(e.target.value);
+          }}></input>
+           <input type="text" value={name} onChange={(e)=> {
+              setName(e.target.value);
           }}></input>
           <button onClick={ ()=> {
             const filterData = allRestaurants.filter((restaurant) => restaurant.info.name.toLowerCase().includes(searchText));

@@ -16,7 +16,7 @@ const HeaderComponent = () => {
                 <li><Link to="/home"> Home</Link></li>
                 <li><Link to="/memo">Memo</Link></li>
                 <li>Profile</li>
-                <li>Cart</li>
+                <li><Link to="/cart">Cart</Link></li>
              </ul>
           </div>
        </div>

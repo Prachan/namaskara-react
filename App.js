@@ -14,6 +14,8 @@ const Memo = lazy( ()=> {
   return import("./src/Memo");
 });
 
+const Cart = lazy (() => import("./src/Cart"));
+
 
 const appRouter = createBrowserRouter([
     {
@@ -39,6 +41,10 @@ const appRouter = createBrowserRouter([
         {
           path: "/memo",
           element: <Suspense fallback ={<h1>Loading Optimization...</h1>}><Memo/></Suspense>
+        },
+        {
+          path: "/cart",
+          element: <Suspense fallback ={<h1>Loading Cart</h1>}><Cart/></Suspense>
         }
       ],
       errorElement: <Error/>
