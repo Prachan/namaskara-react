@@ -16,3 +16,6 @@ Hooks, Routing, Error Handling
 # React - Part9
 Optimaztion, custom Hooks
 //ToDo - UseOnline custom hook.
+
+# React - Part12
+Redux, useContext
